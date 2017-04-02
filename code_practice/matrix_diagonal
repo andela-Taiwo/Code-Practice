@@ -1,0 +1,27 @@
+
+import sys
+
+
+n = int(raw_input().strip())
+a = []
+for a_i in xrange(n):
+    a_temp = map(int,raw_input().strip().split(' '))
+    a.append(a_temp)
+total = None 
+sum1 = long(0)
+sum2 =long(0)
+for k in range (0,n):
+    if(k == 0) :
+        
+        for j in range(0,n):
+            sum1 += a[j][j]
+   
+    elif( k==n-1):
+        for l in range(0,n):
+            sum2 = a[l][l]
+    else:
+        sum1 +=0
+print sum        
+print (sum1 - sum2)
+
+            
